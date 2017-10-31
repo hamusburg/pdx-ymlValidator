@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2005
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pdx-ymlValidator", "pdx-ymlValidator\pdx-ymlValidator.csproj", "{0E911210-4C52-4D9D-B8D4-63BA79D4B1F8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0E911210-4C52-4D9D-B8D4-63BA79D4B1F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E911210-4C52-4D9D-B8D4-63BA79D4B1F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E911210-4C52-4D9D-B8D4-63BA79D4B1F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E911210-4C52-4D9D-B8D4-63BA79D4B1F8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0701369B-2453-427F-BA82-C74AF3DAE9EA}
+	EndGlobalSection
+EndGlobal
