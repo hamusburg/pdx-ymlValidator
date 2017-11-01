@@ -13,8 +13,10 @@ namespace pdx_ymlValidator
         string EngDir = Directory.GetCurrentDirectory() + "\\eng";
         string ChnDir = Directory.GetCurrentDirectory() + "\\chn";
 
-        Dictionary<string, List<Line>> EngDictionary = new Dictionary<string, List<Line>>();
-        Dictionary<string, List<Line>> ChnDictionary = new Dictionary<string, List<Line>>();
+        Dictionary<string, string> EngDictionary = new Dictionary<string, string>();
+        Dictionary<string, string> ChnDictionary = new Dictionary<string, string>();
+
+        string TimeToken = "default";
 
         public FrmMain()
         {
@@ -25,12 +27,7 @@ namespace pdx_ymlValidator
 
         private void BtnStartValidate_Click(object sender, EventArgs e)
         {
-            //var text = @"||||||||||||||";
-            //var result = YMLTools.RegexCountSpecificChar(text, '|');
-
-            EngDictionary.Clear();
-            ChnDictionary.Clear();
-
+            TimeToken = DateTime.Now.ToString("yyyyMMddHHmmss");
             StartValidate();
         }
 
@@ -41,14 +38,17 @@ namespace pdx_ymlValidator
 
             foreach (var file in engFiles)
             {
+                EngDictionary.Clear();
+                ChnDictionary.Clear();
+
                 var fileName = Path.GetFileName(file);
-                if (File.Exists(ChnDir + "\\" + fileName) == false)
+                var chnFileName = ChnDir + "\\" + fileName;
+
+                if (File.Exists(chnFileName) == false)
                 {
-                    WriteLog("不存在的需要被检查的文件" + fileName);
+                    WriteLog("不存在被检查的文件" + fileName);
                     continue;
                 }
-
-                EngDictionary.Add(fileName, new List<Line>());
 
                 using (StreamReader reader = new StreamReader(file, Encoding.UTF8))
                 {
@@ -64,38 +64,66 @@ namespace pdx_ymlValidator
                     while ((line = reader.ReadLine()) != null)
                     {
                         ++count;
-                        if (string.IsNullOrEmpty(line.Trim()))
+                        var clean = line.Trim();
+                        if (string.IsNullOrEmpty(clean) || clean[0] == '#')
                         {
-                            WriteLog(fileName + "中第" + count + "行为空行");
                             continue;
                         }
-                        var key = YMLTools.RegexGetNameOnly(line);
-                        var value = YMLTools.RegexGetValue(line);
-                        EngDictionary[fileName].Add(new Line(key, value));
-                        WriteLog
+                        var key = YMLTools.RegexGetNameOnly(clean);
+                        var value = YMLTools.RegexGetValue(clean);
+                        EngDictionary.Add(key, value);
+                    }
+                }
+
+                using (StreamReader reader = new StreamReader(chnFileName, Encoding.UTF8))
+                {
+                    var count = 0;
+                    var line = reader.ReadLine();
+                    if (string.IsNullOrEmpty(line))
+                    {
+                        WriteLog(fileName + "为空文件");
+                        reader.Close();
+                        continue;
+                    }
+
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        ++count;
+                        var clean = line.Trim();
+                        if (string.IsNullOrEmpty(clean) || clean[0] == '#')
+                        {
+                            continue;
+                        }
+                        var key = YMLTools.RegexGetNameOnly(clean);
+                        var value = YMLTools.RegexGetValue(clean);
+                        ChnDictionary.Add(key, value);
+                    }
+                }
+
+                foreach (var line in EngDictionary)
+                {
+                    var key = line.Key;
+                    var value = line.Value;
+                    if (ChnDictionary.ContainsKey(key))
+                    {
+                        var result = YMLTools.CompareLine(ChnDictionary[key], EngDictionary[key], key, fileName);
+                        if (string.IsNullOrEmpty(result))
+                        {
+                            continue;
+                        }
+                        WriteLog(result);
+                    }
+                    else
+                    {
+                        WriteLog("被校对文件" + fileName + "缺少key为" + key + "的行");
                     }
                 }
             }
         }
 
-        private string ValidateChar(string text, string reference)
-        {
-            var problem = string.Empty;
-            foreach (var ch in ConstVal.SpecialCharSet)
-            {
-                var value = YMLTools.RegexCountSpecificChar(text, ch);
-                var refValue = YMLTools.RegexCountSpecificChar(reference, ch);
-                if (value != refValue)
-                {
-                    problem += ch;
-                }
-            }
-            return problem;
-        }
-
         private void WriteLog(string text)
         {
-            LogHelper.Write(text);
+            LogHelper.Write(text, TimeToken);
         }
     }
 }

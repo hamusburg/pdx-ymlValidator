@@ -13,25 +13,22 @@ namespace pdx_ymlValidator.Util
 
         private static void WriteAsync(string logText, string logfilename)
         {
-            ThreadPool.QueueUserWorkItem(s =>
+            string fullpath = string.Format(path + "Logs\\{0}.txt", logfilename);
+            Directory.CreateDirectory(path + "Logs");
+            using (StreamWriter sw = new StreamWriter(fullpath, true))
             {
-                string fullpath = string.Format(path + "Logs\\{0}.txt", logfilename);
-                Directory.CreateDirectory(path + "Logs");
-                using (StreamWriter sw = new StreamWriter(fullpath, true))
-                {
-                    sw.WriteLine(logText);
-                }
-            });
+                sw.WriteLine(logText);
+            }
         }
 
         public static void Write(string logText)
         {
-            WriteAsync(logText, DateTime.Now.ToString("yyyy-MM-dd"));
+            WriteAsync(logText, DateTime.Now.ToString("yyyyMMddHHmmss"));
         }
 
         public static void Write(string logText, string logfilename)
         {
-            WriteAsync(logText, DateTime.Now.ToString("yyyy-MM-dd"));
+            WriteAsync(logText, logfilename);
         }
     }
 }
