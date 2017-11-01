@@ -28,23 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
+            this.ProgressbarFile = new System.Windows.Forms.ProgressBar();
             this.lblTipCurrentProgress = new System.Windows.Forms.Label();
             this.lblTipAmount = new System.Windows.Forms.Label();
-            this.progressBar2 = new System.Windows.Forms.ProgressBar();
+            this.ProgressbarTotal = new System.Windows.Forms.ProgressBar();
             this.btnStartValidate = new System.Windows.Forms.Button();
             this.lblTipCurrentFileName = new System.Windows.Forms.Label();
             this.lblFileName = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // progressBar1
+            // ProgressbarFile
             // 
-            this.progressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.ProgressbarFile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.progressBar1.Location = new System.Drawing.Point(14, 28);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(438, 23);
-            this.progressBar1.TabIndex = 0;
+            this.ProgressbarFile.Location = new System.Drawing.Point(14, 28);
+            this.ProgressbarFile.Name = "ProgressbarFile";
+            this.ProgressbarFile.Size = new System.Drawing.Size(438, 23);
+            this.ProgressbarFile.TabIndex = 0;
             // 
             // lblTipCurrentProgress
             // 
@@ -64,14 +65,14 @@
             this.lblTipAmount.TabIndex = 2;
             this.lblTipAmount.Text = "总处理进度：";
             // 
-            // progressBar2
+            // ProgressbarTotal
             // 
-            this.progressBar2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.ProgressbarTotal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.progressBar2.Location = new System.Drawing.Point(14, 77);
-            this.progressBar2.Name = "progressBar2";
-            this.progressBar2.Size = new System.Drawing.Size(438, 23);
-            this.progressBar2.TabIndex = 0;
+            this.ProgressbarTotal.Location = new System.Drawing.Point(14, 77);
+            this.ProgressbarTotal.Name = "ProgressbarTotal";
+            this.ProgressbarTotal.Size = new System.Drawing.Size(438, 23);
+            this.ProgressbarTotal.TabIndex = 0;
             // 
             // btnStartValidate
             // 
@@ -91,18 +92,18 @@
             this.lblTipCurrentFileName.Name = "lblTipCurrentFileName";
             this.lblTipCurrentFileName.Size = new System.Drawing.Size(65, 12);
             this.lblTipCurrentFileName.TabIndex = 4;
-            this.lblTipCurrentFileName.Text = "正在处理：";
+            this.lblTipCurrentFileName.Text = "处理状态：";
             // 
             // lblFileName
             // 
             this.lblFileName.AutoSize = true;
             this.lblFileName.Location = new System.Drawing.Point(81, 115);
             this.lblFileName.Name = "lblFileName";
-            this.lblFileName.Size = new System.Drawing.Size(47, 12);
+            this.lblFileName.Size = new System.Drawing.Size(29, 12);
             this.lblFileName.TabIndex = 5;
-            this.lblFileName.Text = "default";
+            this.lblFileName.Text = "空闲";
             // 
-            // frmMain
+            // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -112,11 +113,12 @@
             this.Controls.Add(this.btnStartValidate);
             this.Controls.Add(this.lblTipAmount);
             this.Controls.Add(this.lblTipCurrentProgress);
-            this.Controls.Add(this.progressBar2);
-            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.ProgressbarTotal);
+            this.Controls.Add(this.ProgressbarFile);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "frmMain";
+            this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "yml文件特殊符号检查工具";
             this.ResumeLayout(false);
@@ -126,10 +128,10 @@
 
         #endregion
 
-        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.ProgressBar ProgressbarFile;
         private System.Windows.Forms.Label lblTipCurrentProgress;
         private System.Windows.Forms.Label lblTipAmount;
-        private System.Windows.Forms.ProgressBar progressBar2;
+        private System.Windows.Forms.ProgressBar ProgressbarTotal;
         private System.Windows.Forms.Button btnStartValidate;
         private System.Windows.Forms.Label lblTipCurrentFileName;
         private System.Windows.Forms.Label lblFileName;

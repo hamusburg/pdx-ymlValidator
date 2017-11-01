@@ -6,6 +6,11 @@
     public static class ConstVal
     {
         // §、|、$、[、]
-        public static char[] SpecialCharSet = new char[] { '§', '|', '$', '[', ']' };
+        public static char[] SpecialCharSet = new char[]
+        {
+            '§', '|', '$', '£',
+            '*', '=',
+            '%', '¤', '[', ']'
+        };
     }
 }

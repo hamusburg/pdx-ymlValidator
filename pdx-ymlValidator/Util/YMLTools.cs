@@ -125,7 +125,7 @@ namespace pdx_ymlValidator.Util
                 refValue = RegexCountSpecificChar(reference, ch);
                 if (value != refValue)
                 {
-                    result.AppendFormat("文件{0}的{1}行，\"{2}\"字符，原文数量{3}，参照数量{4}\r\n", fileName, key, ch, value, refValue);
+                    result.AppendFormat("文件{0},行{1},字符\"{2}\",原文数量{3},参照数量{4}\r\n", fileName, key, ch, value, refValue);
                 }
             }
 
@@ -133,21 +133,14 @@ namespace pdx_ymlValidator.Util
             refValue = RegexLineSignCount(reference);
             if (value != refValue)
             {
-                result.AppendFormat("文件{0}的{1}行，换行\\n符，原文数量{2}，参照数量{3}\r\n", fileName, key, value, refValue);
-            }
-
-            value = RegexLineSignCount(text);
-            refValue = RegexLineSignCount(reference);
-            if (value != refValue)
-            {
-                result.AppendFormat("文件{0}的{1}行，换行\\n符，原文数量{2}，参照数量{3}\r\n", fileName, key, value, refValue);
+                result.AppendFormat("文件{0},行{1},字符\"\\n\",原文数量{2},参照数量{3}\r\n", fileName, key, value, refValue);
             }
 
             value = RegexColorSignCount(text);
             refValue = RegexColorSignCount(reference);
             if (value != refValue)
             {
-                result.AppendFormat("文件{0}的{1}行，彩色文本数量，原文数量{2}，参照数量{3}\r\n", fileName, key, value, refValue);
+                result.AppendFormat("文件{0},行{1},彩色文本,原文数量{2},参照数量{3}\r\n", fileName, key, value, refValue);
             }
 
             if (result.Length > 0)

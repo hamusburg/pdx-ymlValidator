@@ -117,4 +117,105 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="ProgressbarFile.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="lblTipCurrentProgress.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="lblTipAmount.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ProgressbarTotal.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="btnStartValidate.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="lblTipCurrentFileName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="lblFileName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAgBAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP4AAAD+AAAA/wAAAP4AAAD+AAAA/wAA
+        AP8AAAD+AAAA/gAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wEBAf8BAQH/AAAA/gAAAP4AAAD/AAAA/gAA
+        AP4AAAD/AAAA/wAAAP4BAQH+AQEB/wEBAf8DAwP/CgoK/wICAv8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wEBAf8AAAD9AAAA/QAA
+        AP8AAAD9AAAA/QAAAP8KCgr/KCgo/TMzM/0rKyv/DQ0N/wwMDP8rKyv/CgoK/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wEB
+        Af8AAAD+AAAA/wAAAP8AAAD+AAAA/wAAAP8KCgr/KSkp/jQ0NP8rKyv/DQ0N/wwMDP8rKyv/CgoK/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wcH
+        B/83Nzf/Ozs7/wsLC/4AAAD/AAAA/wAAAP4AAAD/AAAA/xwcHP99fX3+xMTE/8HBwf9oaGj/Ozs7/yAg
+        IP8CAgL/AQEB/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8BAQH/Dg4O/4+Pj//Gxsb/PDw8/gMDA/8AAAD/AAAA/gAAAP8AAAD/BAQE/ykpKf54eHj/tra2/8LC
+        wv/Dw8P/nJyc/0ZGRv8MDAz/AQEB/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        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
+        tP/6+vr/7+/v/u/v7/6VlZX/4ODg/vz8/P76+vr/8PDw/5OTk/4YGBj+ZmZm/97e3v/7+/v//f39//v7
+        +//IyMj/ZmZm/+vr6//Z2dn/lpaW/0ZGRv8KCgr/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wIC
+        Av8UFBT/kJCQ//v7+//6+vr/+/v7/sHBwf/z8/P//Pz8/vr6+v/6+vr/qKio/xkZGf4SEhL/T09P/4OD
+        g//t7e3//v7+//f39//j4+P//v7+//f39//t7e3/f39//xMTE/8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AgIC/x0dHf+enp7/+/v7//z8/P/8/Pz++Pj4/v7+/v/8/Pz+/Pz8/vf39/+RkZH/BgYG/gQE
+        BP4ICAj/JCQk/+Dg4P/9/f3//Pz8//z8/P/h4eH/xcXF/9zc3P9SUlL/BAQE/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8RERH/eXl5/+vr6//l5eX/v7+//ujo6P77+/v//Pz8/vz8/P79/f3//Pz8/9vb
+        2/59fX3+Tk5O/19fX/+9vb3/+Pj4//z8/P/8/Pz/+vr6/7u7u/8sLCz/DQ0N/wMDA/8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8iIiL/Xl5e/zc3N/9fX1//2tra/uHh4f/Z2dn//Pz8/vz8
+        /P/9/f3//v7+//z8/P79/f3//v7+//7+/v/+/v7//f39//z8/P/8/Pz/9PT0/46Ojv8QEBD/AgIC/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8CAgL/MjIy/8HBwf/U1NT+QUFB/mtr
+        a//6+vr+9/f3/vv7+//9/f3//Pz8/vz8/P7+/v7//v7+//7+/v/U1NT/+Pj4//r6+v/i4uL/bGxs/wcH
+        B/8BAQH/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wEBAf9DQ0P/n5+f/l9f
+        X/4xMTH/vLy8/vDw8P6/v7//6Ojo/+vr6/7p6en+/Pz8//z8/P/8/Pz/+vr6/zk5Of+5ubn/ysrK/5KS
+        kv8tLS3/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wUF
+        Bf8RERH/BgYG/oODg/7v7+//s7Oz/ktLS/7Z2dn/tra2/6Kiov719fX++vr6//v7+//09PT/EhIS/y0t
+        Lf8+Pj7/ERER/wYGBv8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wEBAf4AAAD+Tk5O/3p6ev46Ojr+MzMz/+Dg4P+Ghob+e3t7/vT09P/u7u7/2tra/5iY
+        mP8HBwf/AQEB/wEBAf8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP4BAQH/AgIC/wEBAf4VFRX/X19f/zExMf82Njb+a2tr/2Ji
+        Yv9QUFD/HR0d/wEBAf8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/gAAAP8CAgL/AAAA/gAAAP8CAgL/AQEB/wEB
+        Af4BAQH/AgIC/wICAv8CAgL/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD+AAAA/wAAAP8AAAD+AAAA/wEB
+        Af8AAAD/AAAA/gEBAf8BAQH/AQEB/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/gAAAP4AAAD/AAAA/gAA
+        AP4AAAD/AAAA/wAAAP4AAAD+AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
+</value>
+  </data>
 </root>
