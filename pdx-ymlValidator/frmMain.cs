@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using pdx_ymlValidator.Util;
@@ -127,7 +126,14 @@ namespace pdx_ymlValidator
                         }
                         var key = YMLTools.RegexGetNameOnly(clean);
                         var value = YMLTools.RegexGetValue(clean);
-                        dictionary.Add(key, value);
+                        if (dictionary.ContainsKey(key))
+                        {
+                            dictionary[key] = value;
+                        }
+                        else
+                        {
+                            dictionary.Add(key, value);
+                        }
                     }
                 }
             }

@@ -11,8 +11,9 @@ namespace pdx_ymlValidator.Util
     {
         private const string RegexFilterKey = "^.*(?=:)";
         private const string RegexFilterValue = "(?<=(\\s\")).+(?=\")";
+        private const string RegexFilterBracket = "(?<=\\[)[^}]*(?=\\])";
         private const string RegexFilterKeyAndNum = "(^.*?):.*?(?=\")";
-        private const string RegexFilterColorSign = "(^.*?):.*?(?=\")";
+        private const string RegexFilterColorSign = "(?<=(§.)).+(?=(§!))";
 
         /// <summary>
         /// 获取匹配正则表达式的拼接值
@@ -83,7 +84,17 @@ namespace pdx_ymlValidator.Util
         /// <returns></returns>
         public static int RegexColorSignCount(string RegText)
         {
-            return RegexGetMatchCount(RegText, "(?<=(§.)).+(?=(§!))");
+            return RegexGetMatchCount(RegText, RegexFilterColorSign);
+        }
+
+        /// <summary>
+        /// 计算变量引用数量
+        /// </summary>
+        /// <param name="RegText"></param>
+        /// <returns></returns>
+        public static int RegexBracketSignCount(string RegText)
+        {
+            return RegexGetMatchCount(RegText, RegexFilterBracket);
         }
 
         /// <summary>
@@ -134,6 +145,13 @@ namespace pdx_ymlValidator.Util
             if (value != refValue)
             {
                 result.AppendFormat("文件{0},行{1},字符\"\\n\",原文数量{2},参照数量{3}\r\n", fileName, key, value, refValue);
+            }
+
+            value = RegexBracketSignCount(text);
+            refValue = RegexBracketSignCount(reference);
+            if (value != refValue)
+            {
+                result.AppendFormat("文件{0},行{1},变量引用,原文数量{2},参照数量{3}\r\n", fileName, key, value, refValue);
             }
 
             value = RegexColorSignCount(text);
