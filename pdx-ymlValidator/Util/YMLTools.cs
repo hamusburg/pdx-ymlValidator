@@ -11,7 +11,7 @@ namespace pdx_ymlValidator.Util
     {
         private const string RegexFilterKey = "^.*(?=:)";
         private const string RegexFilterValue = "(?<=(\\s\")).+(?=\")";
-        private const string RegexFilterBracket = "(?<=\\[)[^}]*(?=\\])";
+        private const string RegexFilterBracket = "({[^}]*})";
         private const string RegexFilterKeyAndNum = "(^.*?):.*?(?=\")";
         private const string RegexFilterColorSign = "(?<=(§.)).+(?=(§!))";
 
@@ -126,6 +126,8 @@ namespace pdx_ymlValidator.Util
         /// <returns>校对建议</returns>
         public static string CompareLine(string text, string reference, string key, string fileName)
         {
+            //TODO:将检查结果变为datatable 将所有文本结合完毕后 直接生成CSV结果
+
             var result = new StringBuilder();
             var value = 0;
             var refValue = 0;

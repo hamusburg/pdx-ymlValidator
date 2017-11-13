@@ -50,8 +50,14 @@ namespace pdx_ymlValidator
             }
         }
 
+        /// <summary>
+        /// 验证文本
+        /// </summary>
+        /// <returns></returns>
         private bool StartValidate()
         {
+            //TODO:将检查结果变为datatable 将所有文本结合完毕后 直接生成CSV结果 减少不必要的IO次数提高效率
+
             string[] engFiles = Directory.GetFiles(EngDir, "*.yml", SearchOption.TopDirectoryOnly);
 
             UpdateProgressBar(ProgressbarTotal, engFiles.Length, ProgressBarValueOption.Maximum);
@@ -102,6 +108,12 @@ namespace pdx_ymlValidator
             return true;
         }
 
+        /// <summary>
+        /// 生成词典
+        /// </summary>
+        /// <param name="file">文件路径</param>
+        /// <param name="fileName">文件名</param>
+        /// <param name="dictionary">词典</param>
         private void GenerateDictionary(string file, string fileName, Dictionary<string, string> dictionary)
         {
             dictionary.Clear();
